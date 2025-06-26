@@ -1,42 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  height: 100%;
+  width: 100%;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #f0f8ff; /* light blue */
+  font-family: Arial, sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* 1. Header */
+.header {
+  background-color: #003366; /* dark blue */
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* 2. File Upload */
+.upload-section {
+  background-color: #e6f0fa;
+  text-align: center;
+  padding: 10px 20px;
+  color: black;
+}
+
+.upload-section input {
+  margin-top: 8px;
+  padding: 1px 20px;
+}
+
+/* 3. Main Content */
+.content {
+  flex: 1;
+  display: flex;
+  height: 100%;
+}
+
+/* Left: Job Description */
+.left,
+.right {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+
+.left {
+  border-right: 2px solid #ccc;
+}
+
+.left h2,
+.right h2 {
+  color: #003366;
+  margin-bottom: 10px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+textarea {
+  flex: 1;
+  width: 100%;
+  resize: none;
+  padding: 12px;
+  font-size: 14px;
+  color: black;
+  border-radius: 4px;
+  background-color: #ffffff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+textarea::-webkit-scrollbar {
+  width: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Right: Result */
+.result-box {
+  flex: 1;
+  padding: 12px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: 1px solid #242222;
+  overflow-y: auto;
+  color: black;
 }
 
-.card {
-  padding: 2em;
+.result-box::-webkit-scrollbar {
+  width: 0px;
 }
 
-.read-the-docs {
+.placeholder {
+  margin-top: 50px;
+  text-align: center;
+  font-style: italic;
   color: #888;
+  font-size: 16px;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+/* 4. Button Section */
+.button-section {
+  padding: 15px;
+  background-color: #e6f0fa;
+  text-align: center;
+}
+
+button {
+  padding: 10px 30px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0055aa;
 }
